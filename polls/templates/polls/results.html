@@ -2,7 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>My test page</title>
+	<title>results</title>
+
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
 	<h1>{{ question.text }}</h1>

@@ -3,10 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>INDEX</title>
+
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
 	{% if latest_question_list %}
 	<ul>
+		<h2>Very expressive polls</h2>
 		{% for question in latest_question_list %}
 		<li><a href="{% url 'polls:detail' question.id %}">{{ question.text }}</a></li>
 		{% endfor %}
