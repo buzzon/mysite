@@ -3,7 +3,7 @@ from .models import Question, Choice
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
-    extra = 0
+    extra = 1
 
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -13,5 +13,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
     inlines = [ChoiceInline]
     list_display = ('text', 'pub_date')
+    list_filter = ['pub_date']
+    search_fields = ['text']
 
 admin.site.register(Question, QuestionAdmin)
