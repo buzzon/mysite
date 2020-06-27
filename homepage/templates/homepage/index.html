@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>detail</title>
+{% extends "base_generic.html" %}
 
+{% block content %}
 	{% load static %}
 	<link rel="stylesheet" type="text/css" href="{% static 'homepage/style.css' %}">
-</head>
-<body>
+
 	<h1>Welcome to ...</h1>
 	<h2><a href="{% url 'polls:index' %}">polls</a></h2>
 	<h2><a href="{% url 'admin:index' %}">admin</a></h2>
-</body>
-</html>
+{% endblock %}
